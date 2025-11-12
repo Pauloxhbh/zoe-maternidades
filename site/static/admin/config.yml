@@ -1,16 +1,13 @@
-# Configuração do Backend (Onde salvar)
 backend:
   name: git-gateway
   branch: main
 
-# Configuração de Mídia
 media_folder: "site/static/images/uploads"
 public_folder: "/images/uploads"
 
-# Configuração de Coleções
 collections:
   - name: "conteudo"
-    label: "Conteúdo (Mães e Pais)" # Um só lugar para publicar
+    label: "Conteúdo (Mães e Pais)"
     folder: "site/content/blog" # O tema SÓ lê esta pasta
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
@@ -18,14 +15,12 @@ collections:
       - { label: "Título", name: "title", widget: "string" }
       - { label: "Data de Publicação", name: "date", widget: "datetime" }
       - { label: "Imagem de Capa", name: "image", widget: "image", optional: true }
-      # AQUI ESTÁ A MAGIA:
       - label: "Categorias"
         name: "categories"
         widget: "list"
-        allow_add: false # Não deixa criar categorias novas
-        options: # As únicas opções
+        allow_add: false
+        options:
           - "Mães"
           - "Pais"
-      # FIM DA MAGIA
       - { label: "Conteúdo", name: "body", widget: "markdown" }
       - { label: "Draft", name: "draft", widget: "hidden", default: false }
