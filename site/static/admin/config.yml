@@ -1,18 +1,18 @@
 # Configuração do Backend (Onde salvar)
 backend:
   name: git-gateway
-  branch: main # O seu branch principal
+  branch: main
 
-# Configuração de Mídia (Onde salvar imagens)
-media_folder: "exampleSite/static/images/uploads"
+# Configuração de Mídia (Corrigido)
+media_folder: "site/static/images/uploads"
 public_folder: "/images/uploads"
 
-# Configuração de Coleções (Onde você vai escrever)
+# Configuração de Coleções (Corrigido)
 collections:
-  # Coleção específica PARA MÃES (Antigo "Blog")
+  # Coleção específica PARA MÃES
   - name: "maes"
     label: "Conteúdo para Mães"
-    folder: "exampleSite/content/maes" # Onde os posts das mães serão guardados
+    folder: "site/content/maes" # <<< Caminho corrigido
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
@@ -21,10 +21,10 @@ collections:
       - { label: "Imagem de Capa", name: "image", widget: "image", optional: true }
       - { label: "Conteúdo", name: "body", widget: "markdown" }
 
-  # Coleção específica PARA PAIS (A nova secção)
+  # Coleção específica PARA PAIS
   - name: "pais"
     label: "Conteúdo para Pais"
-    folder: "exampleSite/content/pais" # Onde os posts dos pais serão guardados
+    folder: "site/content/pais" # <<< Caminho corrigido
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
