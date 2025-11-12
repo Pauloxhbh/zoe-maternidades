@@ -10,3 +10,6 @@ disableKinds = ["RSS", "taxonomy", "taxonomyTerm"]
 
 [params]
   images = ["img/og-image.jpg"]
+
+# ESTA É A CORREÇÃO FINAL
+buildFuture = true
