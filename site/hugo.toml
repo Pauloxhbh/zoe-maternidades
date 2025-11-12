@@ -9,5 +9,7 @@ title = "Kaldi"
 disableKinds = ["RSS", "taxonomy", "taxonomyTerm"]
 
 [params]
-images = ["img/og-image.jpg"]
+  images = ["img/og-image.jpg"]
+
+# ESTA É A CORREÇÃO: Movi a linha para fora do [params]
 mainSections = ["maes", "pais"]
