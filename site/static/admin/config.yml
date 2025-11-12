@@ -20,6 +20,7 @@ collections:
       - { label: "Data de Publicação", name: "date", widget: "datetime" }
       - { label: "Imagem de Capa", name: "image", widget: "image", optional: true }
       - { label: "Conteúdo", name: "body", widget: "markdown" }
+      - { label: "Draft", name: "draft", widget: "hidden", default: false } # <<< CORREÇÃO ADICIONADA
 
   # Coleção específica PARA PAIS
   - name: "pais"
@@ -32,3 +33,4 @@ collections:
       - { label: "Data de Publicação", name: "date", widget: "datetime" }
       - { label: "Imagem de Capa", name: "image", widget: "image", optional: true }
       - { label: "Conteúdo", name: "body", widget: "markdown" }
+      - { label: "Draft", name: "draft", widget: "hidden", default: false } # <<< CORREÇÃO ADICIONADA
