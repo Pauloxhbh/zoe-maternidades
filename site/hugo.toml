@@ -1,15 +1,17 @@
 baseurl = "/"
 languageCode = "en-us"
 languageLang = "en"
-title = "Kaldi"
-
-# RSS, categories and tags disabled for an easy start
-# See configuration options for more details: 
-# https://gohugo.io/getting-started/configuration/#toml-configuration
+title = "Zoe Maternidade" # <<< Mudei o título para si
 disableKinds = ["RSS", "taxonomy", "taxonomyTerm"]
 
 [params]
   images = ["img/og-image.jpg"]
 
-# ESTA É A CORREÇÃO FINAL
+# Força a publicação de posts
 buildFuture = true
+
+# ESTA É A CORREÇÃO: Adiciona um link no menu
+[[menu.main]]
+  name = "Conteúdo"
+  url = "/blog"
+  weight = 1
