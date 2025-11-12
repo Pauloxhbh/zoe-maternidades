@@ -3,34 +3,29 @@ backend:
   name: git-gateway
   branch: main
 
-# Configuração de Mídia (Corrigido)
+# Configuração de Mídia
 media_folder: "site/static/images/uploads"
 public_folder: "/images/uploads"
 
-# Configuração de Coleções (Corrigido)
+# Configuração de Coleções
 collections:
-  # Coleção específica PARA MÃES
-  - name: "maes"
-    label: "Conteúdo para Mães"
-    folder: "site/content/maes" # <<< Caminho corrigido
+  - name: "conteudo"
+    label: "Conteúdo (Mães e Pais)" # Um só lugar para publicar
+    folder: "site/content/blog" # O tema SÓ lê esta pasta
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
       - { label: "Título", name: "title", widget: "string" }
       - { label: "Data de Publicação", name: "date", widget: "datetime" }
       - { label: "Imagem de Capa", name: "image", widget: "image", optional: true }
+      # AQUI ESTÁ A MAGIA:
+      - label: "Categorias"
+        name: "categories"
+        widget: "list"
+        allow_add: false # Não deixa criar categorias novas
+        options: # As únicas opções
+          - "Mães"
+          - "Pais"
+      # FIM DA MAGIA
       - { label: "Conteúdo", name: "body", widget: "markdown" }
-      - { label: "Draft", name: "draft", widget: "hidden", default: false } # <<< CORREÇÃO ADICIONADA
-
-  # Coleção específica PARA PAIS
-  - name: "pais"
-    label: "Conteúdo para Pais"
-    folder: "site/content/pais" # <<< Caminho corrigido
-    create: true
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
-    fields:
-      - { label: "Título", name: "title", widget: "string" }
-      - { label: "Data de Publicação", name: "date", widget: "datetime" }
-      - { label: "Imagem de Capa", name: "image", widget: "image", optional: true }
-      - { label: "Conteúdo", name: "body", widget: "markdown" }
-      - { label: "Draft", name: "draft", widget: "hidden", default: false } # <<< CORREÇÃO ADICIONADA
+      - { label: "Draft", name: "draft", widget: "hidden", default: false }
