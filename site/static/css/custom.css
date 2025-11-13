@@ -17,10 +17,11 @@
   --gold: var(--verde-secundario) !important;
 
   --bg-orange: transparent !important; 
+  --bg-gold: transparent !important;
 
   --btn-bg: var(--verde-secundario) !important;
   --btn-color: var(--texto-no-verde) !important;
-  --btn-hover-bg: var(--verde-principal-escuro) !important;
+  --btn-hover-bg: var(--verde-principal-escuro) !importat;
   --btn-hover-color: #FFFFFF !important;
 }
 
@@ -45,8 +46,10 @@ input[type="submit"]:focus {
 
 h1, h2, h3, h4, h5, h6 {
   color: var(--verde-principal) !important;
+  background-color: transparent !important;
+  border-color: transparent !important;
 }
 
-.bg-orange {
+.bg-orange, .bg-gold, .bg-red, .bg-light-red, .bg-washed-red {
   background-color: transparent !important;
 }
