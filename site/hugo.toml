@@ -3,7 +3,7 @@ languageCode = "en-us"
 languageLang = "en"
 title = "Zoe Maternidade" # Título corrigido
 
-disableKinds = ["RSS", "taxonomy", "taxonomyTerm"]
+disableKinds = ["RSS"]
 
 # Correção para forçar a publicação de posts (bug do fuso horário)
 buildFuture = true
