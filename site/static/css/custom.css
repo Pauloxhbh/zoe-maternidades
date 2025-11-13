@@ -1,0 +1,45 @@
+/* --- Nosso Remendo Verde Água --- */
+
+:root {
+  /* Estes são os nossos "baldes de tinta" */
+  --cor-principal: #00796B; /* Verde água escuro (para textos e links) */
+  --cor-secundaria: #B2DFDB; /* Verde água claro (para botões e fundos) */
+  --cor-texto-botao: #212121; /* Texto escuro para botões claros */
+}
+
+/* 1. Botões (ex: "Read more", "Submit" no Newsletter)
+    Isto mata o laranja dos botões.
+*/
+.btn,
+button[type="submit"] {
+  background-color: var(--cor-secundaria) !important;
+  color: var(--cor-texto-botao) !important;
+  border-color: var(--cor-secundaria) !important;
+}
+
+/* 2. Títulos Laranja (ex: "Latest stories" ou o título dos posts)
+*/
+h1, h2, h3, h4, .text-primary {
+  color: var(--cor-principal) !important;
+  border-color: var(--cor-secundaria) !important; /* Caso seja uma borda */
+}
+
+/* 3. Links do Rodapé (ex: "Find out more", "Social media")
+*/
+.footer .title,
+.footer a {
+  color: var(--cor-principal) !important;
+}
+
+.footer a:hover {
+  color: var(--cor-secundaria) !important;
+}
+
+/* 4. Links Gerais (qualquer outro que sobrar)
+*/
+a {
+   color: var(--cor-principal) !important;
+}
+a:hover {
+   color: var(--cor-secundaria) !important;
+}
