@@ -1,17 +1,12 @@
 baseurl = "/"
 languageCode = "en-us"
 languageLang = "en"
-title = "Zoe Maternidade" # <<< Mudei o título para si
+title = "Zoe Maternidade" # Título corrigido
+
 disableKinds = ["RSS", "taxonomy", "taxonomyTerm"]
+
+# Correção para forçar a publicação de posts (bug do fuso horário)
+buildFuture = true
 
 [params]
   images = ["img/og-image.jpg"]
-
-# Força a publicação de posts
-buildFuture = true
-
-# ESTA É A CORREÇÃO: Adiciona um link no menu
-[[menu.main]]
-  name = "Conteúdo"
-  url = "/blog"
-  weight = 1
