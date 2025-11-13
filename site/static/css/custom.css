@@ -1,27 +1,14 @@
-/* --- REMENDO NÍVEL 4: A "GUERRA TOTAL" --- */
-/*
-  O meu erro foi atacar as classes (.orange, h1).
-  A solução é atacar a "fábrica" de cores (as variáveis :root).
-*/
 :root {
-  /* NOSSOS "BALDES DE TINTA" VERDE-ÁGUA */
-  --verde-principal-escuro: #00796B; /* (Substitui o "laranja" escuro) */
-  --verde-principal: #009688;        /* (Substitui o "laranja" principal) */
-  --verde-secundario: #B2DFDB;      /* (Substitui o "laranja" claro) */
-  --verde-fundo-claro: #E0F2F1;     /* (Substitui o "laranja" de fundo) */
-  --texto-no-verde: #212121;        /* (Texto escuro para botões claros) */
+  --verde-principal-escuro: #00796B;
+  --verde-principal: #009688;
+  --verde-secundario: #B2DFDB;
+  --verde-fundo-claro: #E0F2F1;
+  --texto-no-verde: #212121;
 
-  /* A "MALDITA SOLUÇÃO":
-    "Sequestrando" as variáveis DE FÁBRICA do tema Kaldi
-    e forçando-as a usar o nosso verde-água.
-  */
-  
-  /* Variáveis de Cor (do Kaldi) */
   --primary: var(--verde-principal) !important;
   --primary-l: var(--verde-secundario) !important;
   --primary-d: var(--verde-principal-escuro) !important;
 
-  /* Variáveis "Tachyons" (do Kaldi) */
   --dark-red: var(--verde-principal-escuro) !important;
   --red: var(--verde-principal) !important;
   --light-red: var(--verde-secundario) !important;
@@ -29,17 +16,14 @@
   --orange: var(--verde-principal) !important;
   --gold: var(--verde-secundario) !important;
 
-  /* Variáveis de Botão (do Kaldi) */
+  --bg-orange: transparent !important; 
+
   --btn-bg: var(--verde-secundario) !important;
   --btn-color: var(--texto-no-verde) !important;
   --btn-hover-bg: var(--verde-principal-escuro) !important;
-  --btn-hover-color: #FFFFFF !important; /* Texto branco no botão escuro */
+  --btn-hover-color: #FFFFFF !important;
 }
 
-/* SEGURO EXTRA:
-  Mesmo sequestrando as variáveis, vamos forçar os botões
-  e os hovers (passar o mouse) para garantir a vitória.
-*/
 .btn,
 button[type="submit"],
 input[type="submit"] {
@@ -59,7 +43,10 @@ input[type="submit"]:focus {
   border-color: var(--verde-principal-escuro) !important;
 }
 
-/* Força os títulos (Aberração da sua foto) */
 h1, h2, h3, h4, h5, h6 {
   color: var(--verde-principal) !important;
+}
+
+.bg-orange {
+  background-color: transparent !important;
 }
